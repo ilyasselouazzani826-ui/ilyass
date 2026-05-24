@@ -1,143 +1,117 @@
-export default function Halla9App() {
-  const barbers = [
-    {
-      id: 1,
-      name: "Yassine Barber",
-      rating: 4.9,
-      service: "Fade & Beard",
-      image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 2,
-      name: "Hamza Cuts",
-      rating: 4.8,
-      service: "Classic Cut",
-      image: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 3,
-      name: "Omar Style",
-      rating: 4.7,
-      service: "VIP Package",
-      image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop",
-    },
-  ];
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HALLA9</title>
 
-  return (
-    <div className="min-h-screen bg-black text-white font-sans">
-      <header className="flex items-center justify-between px-6 py-5 border-b border-zinc-800">
-        <div>
-          <h1 className="text-3xl font-bold text-yellow-400">Halla9.com</h1>
-          <p className="text-sm text-zinc-400">احجز عند الحلاق بسهولة</p>
-        </div>
-
-        <button className="bg-yellow-400 text-black px-4 py-2 rounded-2xl font-semibold hover:scale-105 transition">
-          تسجيل الدخول
-        </button>
-      </header>
-
-      <section className="px-6 py-10 text-center">
-        <h2 className="text-5xl font-bold leading-tight">
-          احجز موعدك <span className="text-yellow-400">في ثواني</span>
-        </h2>
-
-        <p className="text-zinc-400 mt-4 max-w-2xl mx-auto">
-          اختار الحلاق المناسب، شوف التقييمات، واحجز مباشرة برقم الهاتف.
-        </p>
-
-        <div className="mt-8 flex justify-center gap-4 flex-wrap">
-          <button className="bg-yellow-400 text-black px-6 py-3 rounded-2xl font-bold hover:scale-105 transition">
-            احجز الآن
-          </button>
-
-          <button className="border border-zinc-700 px-6 py-3 rounded-2xl hover:bg-zinc-900 transition">
-            اكتشف الحلاقين
-          </button>
-        </div>
-      </section>
-
-      <section className="px-6 pb-14">
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-2xl font-bold">أفضل الحلاقين</h3>
-          <span className="text-zinc-400">+120 حلاق</span>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {barbers.map((barber) => (
-            <div
-              key={barber.id}
-              className="bg-zinc-900 rounded-3xl overflow-hidden shadow-xl border border-zinc-800 hover:scale-[1.02] transition"
-            >
-              <img
-                src={barber.image}
-                alt={barber.name}
-                className="h-64 w-full object-cover"
-              />
-
-              <div className="p-5">
-                <div className="flex items-center justify-between">
-                  <h4 className="text-xl font-bold">{barber.name}</h4>
-                  <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                    ⭐ {barber.rating}
-                  </span>
-                </div>
-
-                <p className="text-zinc-400 mt-2">{barber.service}</p>
-
-                <div className="mt-5 flex gap-3">
-                  <button className="flex-1 bg-yellow-400 text-black py-3 rounded-2xl font-bold hover:scale-105 transition">
-                    حجز موعد
-                  </button>
-
-                  <button className="px-4 border border-zinc-700 rounded-2xl hover:bg-zinc-800 transition">
-                    تقييمات
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="px-6 pb-14">
-        <div className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
-          <h3 className="text-3xl font-bold mb-6 text-center">
-            احجز موعدك
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-5">
-            <input
-              placeholder="رقم الهاتف"
-              className="bg-zinc-800 p-4 rounded-2xl outline-none"
-            />
-
-            <select className="bg-zinc-800 p-4 rounded-2xl outline-none text-white">
-              <option>اختار الحلاق</option>
-              <option>Yassine Barber</option>
-              <option>Hamza Cuts</option>
-              <option>Omar Style</option>
-            </select>
-
-            <input
-              type="date"
-              className="bg-zinc-800 p-4 rounded-2xl outline-none"
-            />
-
-            <input
-              type="time"
-              className="bg-zinc-800 p-4 rounded-2xl outline-none"
-            />
-          </div>
-
-          <button className="w-full mt-6 bg-yellow-400 text-black py-4 rounded-2xl text-lg font-bold hover:scale-[1.01] transition">
-            تأكيد الحجز
-          </button>
-        </div>
-      </section>
-
-      <footer className="border-t border-zinc-800 py-6 text-center text-zinc-500 text-sm">
-        © 2026 Halla9.com - All Rights Reserved
-      </footer>
-    </div>
-  );
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#111;
+color:white;
 }
+
+header{
+background:#f5b400;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+color:black;
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:#222;
+padding:20px;
+margin-bottom:20px;
+border-radius:15px;
+}
+
+button{
+background:#f5b400;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border-radius:10px;
+border:none;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:gray;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+HALLA9
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>احجز موعدك بسهولة</h2>
+<p>اختار الحلاق ديالك و الوقت المناسب.</p>
+</div>
+
+<div class="card">
+
+<label>الاسم</label>
+<input type="text" placeholder="دخل الاسم ديالك">
+
+<label>رقم الهاتف</label>
+<input type="text" placeholder="06XXXXXXXX">
+
+<label>اختار الحلاق</label>
+<select>
+<option>Yassine Barber</option>
+<option>Hamza Cuts</option>
+<option>Omar Style</option>
+</select>
+
+<label>اختار الوقت</label>
+<select>
+<option>10:00</option>
+<option>11:00</option>
+<option>12:00</option>
+<option>14:00</option>
+<option>16:00</option>
+</select>
+
+<button>تأكيد الحجز</button>
+
+</div>
+
+<div class="card">
+<h2>قيم الخدمة</h2>
+<p>⭐⭐⭐⭐⭐</p>
+</div>
+
+</div>
+
+<footer>
+HALLA9 © 2026
+</footer>
+
+</body>
+</html>
