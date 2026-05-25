@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HALLA9</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#111;
+color:white;
+}
+
+header{
+background:#f5b400;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+color:black;
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:#222;
+padding:20px;
+margin-bottom:20px;
+border-radius:15px;
+}
+
+button{
+background:#f5b400;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border-radius:10px;
+border:none;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:gray;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+HALLA9
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>احجز موعدك بسهولة</h2>
+<p>اختار الحلاق ديالك و الوقت المناسب.</p>
+</div>
+
+<div class="card">
+
+<label>الاسم</label>
+<input type="text" placeholder="دخل الاسم ديالك">
+
+<label>رقم الهاتف</label>
+<input type="text" placeholder="06XXXXXXXX">
+
+<label>اختار الحلاق</label>
+<select>
+<option>Yassine Barber</option>
+<option>Hamza Cuts</option>
+<option>Omar Style</option>
+</select>
+
+<label>اختار الوقت</label>
+<select>
+<option>10:00</option>
+<option>11:00</option>
+<option>12:00</option>
+<option>14:00</option>
+<option>16:00</option>
+</select>
+
+<button>تأكيد الحجز</button>
+
+</div>
+
+<div class="card">
+<h2>قيم الخدمة</h2>
+<p>⭐⭐⭐⭐⭐</p>
+</div>
+
+</div>
+
+<footer>
+HALLA9 © 2026
+</footer>
+
+</body>
+</html>
